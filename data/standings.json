@@ -1,0 +1,155 @@
+{
+  "groups": {
+    "A": {
+      "players": [
+        {
+          "id": "A-p1",
+          "name": "あさけー"
+        },
+        {
+          "id": "A-p2",
+          "name": ""
+        },
+        {
+          "id": "A-p3",
+          "name": ""
+        },
+        {
+          "id": "A-p4",
+          "name": ""
+        },
+        {
+          "id": "A-p5",
+          "name": ""
+        }
+      ],
+      "matches": []
+    },
+    "B": {
+      "players": [
+        {
+          "id": "B-p1",
+          "name": ""
+        },
+        {
+          "id": "B-p2",
+          "name": ""
+        },
+        {
+          "id": "B-p3",
+          "name": ""
+        },
+        {
+          "id": "B-p4",
+          "name": ""
+        },
+        {
+          "id": "B-p5",
+          "name": ""
+        }
+      ],
+      "matches": []
+    },
+    "C": {
+      "players": [
+        {
+          "id": "C-p1",
+          "name": ""
+        },
+        {
+          "id": "C-p2",
+          "name": ""
+        },
+        {
+          "id": "C-p3",
+          "name": ""
+        },
+        {
+          "id": "C-p4",
+          "name": ""
+        },
+        {
+          "id": "C-p5",
+          "name": ""
+        }
+      ],
+      "matches": []
+    },
+    "D": {
+      "players": [
+        {
+          "id": "D-p1",
+          "name": ""
+        },
+        {
+          "id": "D-p2",
+          "name": ""
+        },
+        {
+          "id": "D-p3",
+          "name": ""
+        },
+        {
+          "id": "D-p4",
+          "name": ""
+        },
+        {
+          "id": "D-p5",
+          "name": ""
+        }
+      ],
+      "matches": []
+    },
+    "E": {
+      "players": [
+        {
+          "id": "E-p1",
+          "name": ""
+        },
+        {
+          "id": "E-p2",
+          "name": ""
+        },
+        {
+          "id": "E-p3",
+          "name": ""
+        },
+        {
+          "id": "E-p4",
+          "name": ""
+        },
+        {
+          "id": "E-p5",
+          "name": ""
+        }
+      ],
+      "matches": []
+    },
+    "F": {
+      "players": [
+        {
+          "id": "F-p1",
+          "name": ""
+        },
+        {
+          "id": "F-p2",
+          "name": ""
+        },
+        {
+          "id": "F-p3",
+          "name": ""
+        },
+        {
+          "id": "F-p4",
+          "name": ""
+        },
+        {
+          "id": "F-p5",
+          "name": ""
+        }
+      ],
+      "matches": []
+    }
+  },
+  "wildcards": []
+}
