@@ -207,7 +207,19 @@
           "name": "Kappa"
         }
       ],
-      "matches": []
+      "matches": [
+        {
+          "id": "m-msem8bij-5zub8",
+          "p1": "C-p1",
+          "p2": "C-p4",
+          "s1": 4,
+          "s2": 0,
+          "h1": 6,
+          "h2": 4,
+          "winner": "p1",
+          "ts": 1785845381707
+        }
+      ]
     },
     "D": {
       "players": [
