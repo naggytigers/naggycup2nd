@@ -47,9 +47,7 @@
   .backlink{display:block;text-align:center;color:var(--ink-dim);font-size:12.5px;margin-bottom:20px;text-decoration:none;}
   .backlink:hover{color:var(--gold-1);}
 
-  .editbar{
-    display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 0 20px;
-  }
+  .editbar{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;margin:0 0 20px;}
   .edit-status{font-size:12.5px;color:var(--ink-dim);font-weight:700;letter-spacing:0.03em;}
   button{
     font-family:inherit;cursor:pointer;border:none;border-radius:9px;font-weight:700;font-size:13.5px;
@@ -75,51 +73,47 @@
   .login-form .hint{color:var(--ink-dim);font-size:11px;line-height:1.6;margin:10px 0 0;}
   .error-msg{color:var(--danger);font-size:12.5px;margin:6px 0 0;min-height:1em;}
 
-  .bracket-scroll{overflow-x:auto;padding:6px 4px 20px;}
+  .bracket-scroll{overflow-x:auto;padding:10px 4px 20px;}
   .scroll-hint{display:none;text-align:center;color:var(--ink-dim);font-size:11.5px;margin-bottom:10px;}
   .bracket{position:relative;margin:0 auto;}
 
-  .match-box{
-    position:absolute;width:190px;height:64px;background:rgba(12,13,22,0.92);
-    border:1px solid rgba(212,175,55,0.4);border-radius:8px;overflow:hidden;
-    box-shadow:0 4px 14px rgba(0,0,0,0.4);
-  }
-  .match-box.final-box{border-color:var(--gold-1);box-shadow:0 4px 20px rgba(212,175,55,0.25);}
-  .match-row{
-    display:flex;align-items:center;gap:5px;height:32px;padding:0 7px;
-    border-bottom:1px solid rgba(255,255,255,0.06);
-  }
-  .match-row:last-child{border-bottom:none;}
-  .match-row.winner-row{background:rgba(212,175,55,0.16);}
-  .match-row .p-name{
-    flex:1;min-width:0;background:transparent;border:none;color:var(--ink);
-    font-size:12px;font-family:inherit;padding:2px 0;
-  }
-  .match-row .p-name:disabled{opacity:1;color:var(--ink);}
-  .match-row .p-name.static-name{color:var(--ink-dim);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-style:italic;}
-  .match-row .p-name.static-name.filled{color:var(--ink);font-style:normal;}
-  .match-row .trophy-mark{font-size:11px;margin-right:2px;flex-shrink:0;}
-  .match-row .p-score{
-    width:34px;flex-shrink:0;background:rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.15);
-    border-radius:5px;color:var(--ink);font-size:12px;text-align:center;padding:3px 2px;
-  }
-  .match-row .p-score:disabled{opacity:0.3;}
-  .match-label{position:absolute;font-size:10.5px;color:var(--gold-1);font-weight:700;white-space:nowrap;letter-spacing:0.02em;}
+  .bracket-line-h{position:absolute;height:2px;background:rgba(154,155,170,0.35);}
+  .bracket-line-h.lit{background:linear-gradient(90deg,var(--gold-2),var(--gold-1));box-shadow:0 0 6px rgba(212,175,55,0.5);}
+  .bracket-line-v{position:absolute;width:2px;background:rgba(154,155,170,0.35);}
+  .bracket-line-v.lit{background:linear-gradient(180deg,var(--gold-2),var(--gold-1));box-shadow:0 0 6px rgba(212,175,55,0.5);}
 
-  .stub{position:absolute;height:2px;background:rgba(212,175,55,0.22);}
-  .stub.lit{background:linear-gradient(90deg,var(--gold-2),var(--gold-1));box-shadow:0 0 6px rgba(212,175,55,0.55);}
-  .vline{position:absolute;width:2px;background:rgba(212,175,55,0.22);}
-  .vline.lit{background:linear-gradient(180deg,var(--gold-2),var(--gold-1));box-shadow:0 0 6px rgba(212,175,55,0.55);}
-
-  .champion-card{
-    position:absolute;text-align:center;padding:10px 8px;border-radius:10px;
-    background:linear-gradient(180deg, rgba(70,52,10,0.75), rgba(18,14,5,0.8));
-    border:1px solid var(--card-border);
+  .seed-input{
+    position:absolute;background:rgba(0,0,0,0.4);border:1px solid rgba(212,175,55,0.55);
+    border-radius:6px;color:var(--ink);font-size:12.5px;font-family:inherit;padding:0 8px;
+    height:26px;text-align:center;
   }
-  .champion-card .cc-label{font-size:9.5px;color:var(--ink-dim);letter-spacing:0.1em;}
-  .champion-card .cc-name{font-size:16px;font-weight:900;color:var(--gold-1);margin-top:3px;
-    text-shadow:0 0 12px rgba(212,175,55,0.5);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-  .champion-card.empty .cc-name{color:var(--ink-dim);font-weight:500;font-size:12.5px;text-shadow:none;}
+  .seed-input:disabled{opacity:1;color:var(--ink);}
+  .seed-input:focus{outline:none;border-color:var(--gold-1);box-shadow:0 0 0 2px rgba(212,175,55,0.25);}
+
+  .result-label{
+    position:absolute;font-size:12px;color:var(--ink);font-weight:700;white-space:nowrap;
+    overflow:hidden;text-overflow:ellipsis;border:1px solid rgba(212,175,55,0.3);
+    background:rgba(0,0,0,0.28);border-radius:6px;padding:0 8px;height:26px;
+    display:flex;align-items:center;
+  }
+
+  .match-tag{position:absolute;font-size:9.5px;color:var(--ink-dim);white-space:nowrap;letter-spacing:0.02em;}
+
+  .score-input{
+    position:absolute;width:27px;height:19px;background:rgba(0,0,0,0.45);border:1px solid rgba(255,255,255,0.18);
+    border-radius:5px;color:var(--ink);font-size:11.5px;text-align:center;padding:0;z-index:2;
+  }
+  .score-input:disabled{opacity:0.3;}
+  .score-input.win{border-color:var(--gold-1);background:rgba(212,175,55,0.22);color:var(--gold-1);font-weight:700;}
+  .trophy-dot{position:absolute;font-size:11px;z-index:2;}
+
+  .champion-label{
+    position:absolute;text-align:center;font-size:15px;font-weight:900;color:var(--gold-1);
+    border:1px solid var(--card-border);background:rgba(70,52,10,0.45);border-radius:8px;
+    padding:0 10px;height:34px;display:flex;align-items:center;justify-content:center;
+    text-shadow:0 0 10px rgba(212,175,55,0.5);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  }
+  .champion-label.empty{color:var(--ink-dim);font-weight:500;font-size:12px;text-shadow:none;border-color:rgba(255,255,255,0.15);}
 
   footer{text-align:center;margin-top:30px;}
   footer .note{color:var(--ink-dim);font-size:11.5px;line-height:1.7;max-width:560px;margin:0 auto 14px;}
@@ -133,9 +127,7 @@
   }
   .toast.show{opacity:1;}
 
-  @media (max-width:700px){
-    .scroll-hint{display:block;}
-  }
+  @media (max-width:700px){ .scroll-hint{display:block;} }
 </style>
 </head>
 <body>
@@ -173,7 +165,7 @@
   </div>
 
   <footer>
-    <p class="note">対戦結果（得点）を入力すると得点の高い方が自動的に勝ち進みます。入力・編集は、編集モードにログインした人だけが行えます。</p>
+    <p class="note">選手名は1回戦の欄にだけ入力します。得点を入れると得点の高い方が自動的に勝ち上がり、線がつながって表示されます。入力・編集は編集モードにログインした人だけが行えます。</p>
     <button class="ghost hidden" id="resetAllBtn">全データをリセット</button>
   </footer>
 
@@ -188,13 +180,13 @@
   // ============================================================
   // GitHub 設定：グループ予選ページ（index.html）と同じ値にしてください
   // ============================================================
-  var REPO_OWNER = "naggytigers";
-  var REPO_NAME  = "naggycup2nd";
+  var REPO_OWNER = "YOUR_GITHUB_USERNAME";
+  var REPO_NAME  = "YOUR_REPO_NAME";
   var BRANCH     = "main";
   var DATA_PATH  = "data/bracket.json";
   // ============================================================
 
-  var GH_TOKEN_KEY = "naggy-cup-gh-token"; // index.html と同じキー（ログイン状態を共有）
+  var GH_TOKEN_KEY = "naggy-cup-gh-token";
   var isConfigured = (REPO_OWNER !== "YOUR_GITHUB_USERNAME" && REPO_NAME !== "YOUR_REPO_NAME");
 
   var ghToken = null;
@@ -203,31 +195,21 @@
 
   var state = null;
 
-  /* ---------- geometry (fixed, for an 8-player bracket) ---------- */
-  var G = { boxW:190, boxH:64, stub:24, gap1:40, baseTop:34, padLeft:10 };
-  var box1Top = G.baseTop;                        // 34
-  var box1CenterY = box1Top + G.boxH/2;            // 66
-  var box2Top = box1Top + G.boxH + G.gap1;         // 138
-  var box2CenterY = box2Top + G.boxH/2;            // 170
-  var r2CenterY = (box1CenterY + box2CenterY)/2;   // 118
-  var r2Top = r2CenterY - G.boxH/2;                // 86
-
-  var xR1L = G.padLeft;                            // 10
-  var xR1L_right = xR1L + G.boxW;                  // 200
-  var xVlineL = xR1L_right + G.stub;                // 224
-  var xR2L = xVlineL + G.stub;                      // 248
-  var xR2L_right = xR2L + G.boxW;                   // 438
-  var xFinal = xR2L_right + G.stub;                 // 462
-  var xFinal_right = xFinal + G.boxW;               // 652
-  var xR2R = xFinal_right + G.stub;                 // 676
-  var xR2R_right = xR2R + G.boxW;                   // 866
-  var xVlineR = xR2R_right + G.stub;                // 890
-  var xR1R = xVlineR + G.stub;                      // 914
-  var xR1R_right = xR1R + G.boxW;                   // 1104
-
-  var championTop = r2Top + G.boxH + 16;            // 166
-  var BRACKET_W = xR1R_right + G.padLeft;           // 1114
-  var BRACKET_H = championTop + 70;                 // 236
+  /* ---------- geometry (fixed, line-based bracket for 8 players) ---------- */
+  var TOTAL_W = 1000, TOTAL_H = 200;
+  var Y = [50, 86, 122, 158];                 // the 4 lane heights per side
+  var JY1 = (Y[0]+Y[1])/2;                    // 68  - m1 / m3 junction y
+  var JY2 = (Y[2]+Y[3])/2;                    // 140 - m2 / m4 junction y
+  var JY3 = (JY1+JY2)/2;                      // 104 - m5 / m6 junction y
+  var xPad = 10, LEN1 = 170, LEN2 = 170, LEN3 = 150;
+  var xJleafL = xPad+LEN1;                    // 180
+  var xJsemiL = xJleafL+LEN2;                 // 350
+  var xJfinal = xJsemiL+LEN3;                 // 500
+  var xJleafR = TOTAL_W - xJleafL;             // 820
+  var xJsemiR = TOTAL_W - xJsemiL;             // 650
+  var xSeedL = xPad;                          // 10
+  var xSeedR = TOTAL_W - xPad;                // 990
+  var SEED_BOX_W = 130;                       // width of the name box at each seed line's start
 
   /* ---------- default state ---------- */
   function defaultState(){
@@ -246,7 +228,7 @@
     });
   }
 
-  /* ---------- GitHub storage (same pattern as index.html) ---------- */
+  /* ---------- GitHub storage ---------- */
   function utf8ToBase64(str){
     var bytes = new TextEncoder().encode(str);
     var binary = "";
@@ -394,105 +376,107 @@
     return m.s1 > m.s2 ? {name:name1, slot:1} : {name:name2, slot:2};
   }
 
-  function computeAll(){
-    var w1 = computeWinner("m1", seedName(0), true, seedName(1), true);
-    var w2 = computeWinner("m2", seedName(2), true, seedName(3), true);
-    var w3 = computeWinner("m3", seedName(4), true, seedName(5), true);
-    var w4 = computeWinner("m4", seedName(6), true, seedName(7), true);
-    var w5 = computeWinner("m5", w1.name, !!w1.name, w2.name, !!w2.name);
-    var w6 = computeWinner("m6", w3.name, !!w3.name, w4.name, !!w4.name);
-    var w7 = computeWinner("m7", w5.name, !!w5.name, w6.name, !!w6.name);
-    return {w1:w1,w2:w2,w3:w3,w4:w4,w5:w5,w6:w6,w7:w7};
+  /* ---------- drawing helpers ---------- */
+  function hline(y, x1, x2, lit){
+    var left = Math.min(x1,x2), width = Math.abs(x2-x1);
+    return '<div class="bracket-line-h'+(lit?' lit':'')+'" style="top:'+(y-1)+'px;left:'+left+'px;width:'+width+'px;"></div>';
   }
-
-  /* ---------- rendering ---------- */
-  function matchBoxHtml(opts){
-    // opts: matchId, top, left, label, extraClass,
-    // p1{name, editableSeed(idx or null), det, disabled}, p2{...}, winnerSlot
-    var m = state.matches[opts.matchId];
-    function rowHtml(p, scoreKey, slot){
-      var isWinner = opts.winnerSlot === slot;
-      var nameHtml;
-      if(p.seedIndex != null){
-        var val = escapeHtml(state.players[p.seedIndex] || "");
-        nameHtml = '<input type="text" class="p-name" maxlength="16" placeholder="選手'+(p.seedIndex+1)+'" '+
-                   'value="'+val+'" data-seed="'+p.seedIndex+'" '+(isEditMode?'':'disabled')+'>';
-      } else {
-        var shown = p.name ? escapeHtml(p.name) : "(未定)";
-        nameHtml = '<span class="p-name static-name'+(p.name?' filled':'')+'">'+shown+'</span>';
-      }
-      var scoreDisabled = (!isEditMode || !p.det) ? "disabled" : "";
-      var trophy = isWinner ? '<span class="trophy-mark">🏆</span>' : '';
-      return '<div class="match-row'+(isWinner?' winner-row':'')+'">'+trophy+nameHtml+
-             '<input type="number" class="p-score" min="0" value="'+(m[scoreKey]||0)+'" '+
-             'data-match="'+opts.matchId+'" data-score="'+scoreKey+'" '+scoreDisabled+'></div>';
+  function vline(x, y1, y2, lit){
+    if(y1===y2) return '';
+    var top = Math.min(y1,y2), height = Math.abs(y2-y1);
+    return '<div class="bracket-line-v'+(lit?' lit':'')+'" style="top:'+top+'px;left:'+(x-1)+'px;height:'+height+'px;"></div>';
+  }
+  function seedInput(idx, x, y, mirrored){
+    var val = escapeHtml(state.players[idx] || "");
+    var width = 130;
+    var left = mirrored ? (x-width) : x;
+    return '<input type="text" class="seed-input" style="left:'+left+'px;top:'+(y-13)+'px;width:'+width+'px;" '+
+      'maxlength="16" placeholder="選手'+(idx+1)+'" value="'+val+'" data-seed="'+idx+'" '+(isEditMode?'':'disabled')+'>';
+  }
+  function resultLabel(name, x, y, mirrored){
+    if(!name) return '';
+    var width = 140;
+    var left = mirrored ? (x-4-width) : (x+4);
+    var align = mirrored ? 'justify-content:flex-end;' : 'justify-content:flex-start;';
+    return '<div class="result-label" style="left:'+left+'px;top:'+(y-13)+'px;width:'+width+'px;'+align+'">'+escapeHtml(name)+'</div>';
+  }
+  function matchTag(label, x, y, mirrored){
+    var width=90;
+    var left = mirrored ? (x-width/2) : (x-width/2);
+    var align='text-align:center;';
+    return '<div class="match-tag" style="left:'+left+'px;top:'+(y+8)+'px;width:'+width+'px;'+align+'">'+label+'</div>';
+  }
+  function scoreInputHtml(matchId, key, x, y, mirrored, enabled, isWinner){
+    var val = state.matches[matchId][key] || 0;
+    var width = 27;
+    var left = mirrored ? (x+6) : (x-6-width);
+    var html = '<input type="number" class="score-input'+(isWinner?' win':'')+'" style="left:'+left+'px;top:'+(y-10)+'px;" '+
+      'min="0" value="'+val+'" data-match="'+matchId+'" data-score="'+key+'" '+(enabled?'':'disabled')+'>';
+    if(isWinner){
+      var tx = mirrored ? (left-15) : (left+width+2);
+      html += '<span class="trophy-dot" style="left:'+tx+'px;top:'+(y-9)+'px;">🏆</span>';
     }
-    var html = '<div class="match-label" style="top:'+(opts.top-16)+'px;left:'+opts.left+'px;">'+opts.label+'</div>';
-    html += '<div class="match-box'+(opts.extraClass?(' '+opts.extraClass):'')+'" style="top:'+opts.top+'px;left:'+opts.left+'px;">';
-    html += rowHtml(opts.p1, "s1", 1);
-    html += rowHtml(opts.p2, "s2", 2);
-    html += '</div>';
     return html;
   }
 
-  function stub(top,left,width,lit){
-    return '<div class="stub'+(lit?' lit':'')+'" style="top:'+top+'px;left:'+left+'px;width:'+width+'px;"></div>';
-  }
-  function vline(top,left,height,lit){
-    return '<div class="vline'+(lit?' lit':'')+'" style="top:'+top+'px;left:'+left+'px;height:'+height+'px;"></div>';
+  function renderJunction(matchId, junctionX, y1, y2, destEndX, mirrored, name1, det1, name2, det2, label){
+    var junctionY = (y1+y2)/2;
+    var w = computeWinner(matchId, name1, det1, name2, det2);
+    var decided = !!w.name;
+    var html = "";
+    html += vline(junctionX, y1, y2, decided);
+    if(destEndX != null){
+      html += hline(junctionY, junctionX, destEndX, decided);
+      html += resultLabel(w.name, junctionX, junctionY, mirrored);
+    }
+    if(label) html += matchTag(label, junctionX, Math.max(y1,y2), mirrored);
+    var enabled = isEditMode && det1 && det2;
+    html += scoreInputHtml(matchId, "s1", junctionX, y1, mirrored, enabled, w.slot===1);
+    html += scoreInputHtml(matchId, "s2", junctionX, y2, mirrored, enabled, w.slot===2);
+    return {html:html, winner:w};
   }
 
   function renderBracket(){
-    var w = computeAll();
     var html = "";
 
-    // ---- Round1 Left (m1, m2) ----
-    html += matchBoxHtml({matchId:"m1", top:box1Top, left:xR1L, label:"第1試合",
-      p1:{seedIndex:0, det:true}, p2:{seedIndex:1, det:true}, winnerSlot:w.w1.slot});
-    html += matchBoxHtml({matchId:"m2", top:box2Top, left:xR1L, label:"第2試合",
-      p1:{seedIndex:2, det:true}, p2:{seedIndex:3, det:true}, winnerSlot:w.w2.slot});
+    // 8 leaf seed lines + name inputs
+    for(var i=0;i<4;i++){
+      html += hline(Y[i], xSeedL+SEED_BOX_W, xJleafL, false);
+      html += seedInput(i, xSeedL, Y[i], false);
+    }
+    for(var j=0;j<4;j++){
+      html += hline(Y[j], xJleafR, xSeedR-SEED_BOX_W, false);
+      html += seedInput(4+j, xSeedR, Y[j], true);
+    }
 
-    // connectors: R1L pair -> R2L
-    html += stub(box1CenterY, xR1L_right, G.stub, !!w.w1.name);
-    html += stub(box2CenterY, xR1L_right, G.stub, !!w.w2.name);
-    html += vline(box1CenterY, xVlineL, box2CenterY-box1CenterY, (!!w.w1.name && !!w.w2.name));
-    html += stub(r2CenterY, xVlineL, G.stub, (!!w.w1.name && !!w.w2.name));
+    var r1 = renderJunction("m1", xJleafL, Y[0], Y[1], xJsemiL, false, seedName(0), true, seedName(1), true, "第1試合");
+    html += r1.html;
+    var r2 = renderJunction("m2", xJleafL, Y[2], Y[3], xJsemiL, false, seedName(2), true, seedName(3), true, "第2試合");
+    html += r2.html;
+    var r3 = renderJunction("m3", xJleafR, Y[0], Y[1], xJsemiR, true, seedName(4), true, seedName(5), true, "第3試合");
+    html += r3.html;
+    var r4 = renderJunction("m4", xJleafR, Y[2], Y[3], xJsemiR, true, seedName(6), true, seedName(7), true, "第4試合");
+    html += r4.html;
 
-    // ---- Round2 Left (m5) ----
-    html += matchBoxHtml({matchId:"m5", top:r2Top, left:xR2L, label:"第5試合（準決勝）",
-      p1:{name:w.w1.name, det:!!w.w1.name}, p2:{name:w.w2.name, det:!!w.w2.name}, winnerSlot:w.w5.slot});
-    html += stub(r2CenterY, xR2L_right, G.stub, !!w.w5.name);
+    var r5 = renderJunction("m5", xJsemiL, JY1, JY2, xJfinal, false, r1.winner.name, !!r1.winner.name, r2.winner.name, !!r2.winner.name, "第5試合(準決勝)");
+    html += r5.html;
+    var r6 = renderJunction("m6", xJsemiR, JY1, JY2, xJfinal, true, r3.winner.name, !!r3.winner.name, r4.winner.name, !!r4.winner.name, "第6試合(準決勝)");
+    html += r6.html;
 
-    // ---- Final (m7) ----
-    html += matchBoxHtml({matchId:"m7", top:r2Top, left:xFinal, label:"第7試合（決勝）", extraClass:"final-box",
-      p1:{name:w.w5.name, det:!!w.w5.name}, p2:{name:w.w6.name, det:!!w.w6.name}, winnerSlot:w.w7.slot});
+    // final (m7): sources arrive from opposite sides at the same height
+    var w7 = computeWinner("m7", r5.winner.name, !!r5.winner.name, r6.winner.name, !!r6.winner.name);
+    var enabled7 = isEditMode && !!r5.winner.name && !!r6.winner.name;
+    var champStub = 65;
+    html += scoreInputHtml("m7","s1", xJfinal-champStub, JY3, false, enabled7, w7.slot===1);
+    html += scoreInputHtml("m7","s2", xJfinal+champStub, JY3, true, enabled7, w7.slot===2);
 
-    // champion card
-    var champHtml = w.w7.name
-      ? '<div class="cc-label">🏆 CHAMPION</div><div class="cc-name">'+escapeHtml(w.w7.name)+'</div>'
-      : '<div class="cc-label">CHAMPION</div><div class="cc-name">優勝者未定</div>';
-    html += '<div class="champion-card'+(w.w7.name?'':' empty')+'" style="top:'+championTop+'px;left:'+xFinal+'px;width:'+G.boxW+'px;">'+champHtml+'</div>';
-
-    // ---- Round2 Right (m6) ----
-    html += stub(r2CenterY, xFinal_right, G.stub, !!w.w6.name);
-    html += matchBoxHtml({matchId:"m6", top:r2Top, left:xR2R, label:"第6試合（準決勝）",
-      p1:{name:w.w3.name, det:!!w.w3.name}, p2:{name:w.w4.name, det:!!w.w4.name}, winnerSlot:w.w6.slot});
-
-    // connectors: R2R -> R1R pair
-    html += stub(r2CenterY, xR2R_right, G.stub, (!!w.w3.name && !!w.w4.name));
-    html += vline(box1CenterY, xVlineR, box2CenterY-box1CenterY, (!!w.w3.name && !!w.w4.name));
-    html += stub(box1CenterY, xVlineR+G.stub-2, G.stub, !!w.w3.name);
-    html += stub(box2CenterY, xVlineR+G.stub-2, G.stub, !!w.w4.name);
-
-    // ---- Round1 Right (m3, m4) ----
-    html += matchBoxHtml({matchId:"m3", top:box1Top, left:xR1R, label:"第3試合",
-      p1:{seedIndex:4, det:true}, p2:{seedIndex:5, det:true}, winnerSlot:w.w3.slot});
-    html += matchBoxHtml({matchId:"m4", top:box2Top, left:xR1R, label:"第4試合",
-      p1:{seedIndex:6, det:true}, p2:{seedIndex:7, det:true}, winnerSlot:w.w4.slot});
+    // champion: shown as a label sitting directly on the line where the two finalists' lines meet
+    var champText = w7.name ? ("🏆 "+escapeHtml(w7.name)) : "優勝者未定";
+    html += '<div class="champion-label'+(w7.name?'':' empty')+'" style="left:'+(xJfinal-champStub)+'px;top:'+(JY3-17)+'px;width:'+(champStub*2)+'px;">'+champText+'</div>';
 
     var root = document.getElementById("bracketRoot");
-    root.style.width = BRACKET_W+"px";
-    root.style.height = BRACKET_H+"px";
+    root.style.width = TOTAL_W+"px";
+    root.style.height = TOTAL_H+"px";
     root.innerHTML = html;
   }
 
@@ -555,14 +539,14 @@
 
     var root = document.getElementById("bracketRoot");
     root.addEventListener("change", function(e){
-      if(e.target.matches(".p-name[data-seed]")){
+      if(e.target.matches(".seed-input[data-seed]")){
         setSeedName(parseInt(e.target.getAttribute("data-seed"),10), e.target.value);
-      } else if(e.target.matches(".p-score")){
+      } else if(e.target.matches(".score-input")){
         setScore(e.target.getAttribute("data-match"), e.target.getAttribute("data-score"), e.target.value);
       }
     });
     root.addEventListener("keydown", function(e){
-      if((e.target.matches(".p-name[data-seed]") || e.target.matches(".p-score")) && e.key==="Enter"){
+      if((e.target.matches(".seed-input[data-seed]") || e.target.matches(".score-input")) && e.key==="Enter"){
         e.target.blur();
       }
     });
